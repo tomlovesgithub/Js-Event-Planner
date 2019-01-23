@@ -19,17 +19,7 @@ window.addEventListener('load', () => {
   }
 
   function displayEvents(){
-    eventDiv = ""
-    var eventsList = document.getElementById('eventsList')
-    var eventDiv = document.createElement('div')
-
-    let eventsArr = eventsCalender.events;
-    eventsArr.forEach(function(event){
-      eventDiv.innerText = `${event.content}:${event.date} -:- `
-      eventsList.appendChild(eventDiv);
-    })
+    eventsCalender.eventsToDisplay();
   }
-
-
 
 })
