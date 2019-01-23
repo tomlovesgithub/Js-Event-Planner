@@ -5,7 +5,6 @@ describe('EventsCalender', () => {
   })
   it('increases by one when event is added', () => {
     evntCal.addEvent(event)
-    evntCal.storeEvent(event)
     expect((evntCal.events).length).toBe(1)
   })
 });

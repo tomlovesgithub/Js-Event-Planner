@@ -3,11 +3,8 @@ class EventsCalender {
     this.events = []
   }
 
-  addEvent(content, date, time) {
-    newEvent = new Event(content, date, time)
+  addEvent(event) {
+    this.events.push(event)
   }
   
-  storeEvent() {
-    this.events.push(newEvent)
-  }
 }

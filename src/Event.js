@@ -1,8 +1,7 @@
 class Event {
-  constructor(content, date, time) {
+  constructor(content, date) {
     this.content = content;
     this.date = date;
-    this.time = time;
   }
 
 }
