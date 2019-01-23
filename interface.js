@@ -19,6 +19,7 @@ window.addEventListener('load', () => {
   }
 
   function displayEvents(){
+    eventsCalender.sortEvents();
     eventsCalender.eventsToDisplay();
   }
 
