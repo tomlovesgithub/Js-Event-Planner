@@ -15,12 +15,14 @@ window.addEventListener('load', () => {
     eventsCalender.addEvent(event)
     textbox.value = "";
     date.value = "";
-    displayEvents()
+    eventsCalender.sortEvents();
+    displayEvents();
   }
 
   function displayEvents(){
-    eventsCalender.sortEvents();
+    
     eventsCalender.eventsToDisplay();
+    
   }
 
 })
