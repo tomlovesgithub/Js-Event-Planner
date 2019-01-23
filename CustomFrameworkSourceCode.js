@@ -1,4 +1,4 @@
-const it = (msg, fn) => describe('  ' + msg, fn)
+const it = (msg, fn) => describe(':\n' + msg, fn)
 
 const describe = (desc, fn) => {
   console.log(desc + ":")
@@ -6,12 +6,12 @@ const describe = (desc, fn) => {
 }
 
 const passMessage = () => {
-  console.log('%c*  Pass!  *', 'color: forestgreen; background: lightgreen')
+  console.log('%c*  ! Yegative !  *', 'color: forestgreen; background: lightgreen')
   return true
 }
 
 const failMessage = () => {
-  console.log('%c*  Fail!  *', 'color: red; background: pink')
+  console.log('%c*  xX Negative Xx  *', 'color: red; background: black')
   return false
 }
 
@@ -24,15 +24,15 @@ const matchers = (exp) => ({
     }
   },
   toThrow: (error) => {
-    var result = 'Fail!'
+    var result = 'fail'
     try {
       exp();
     }
     catch(e) {
-      result = 'Pass!';
+      result = 'pass';
     }
-    finally {   
-      if (result === 'Pass!') {
+    finally {
+      if (result === 'pass') {
       passMessage()
       } else {
       failMessage()
@@ -42,7 +42,3 @@ const matchers = (exp) => ({
 })
 
 const expect = (exp) => matchers(exp)
-
-
-
-
