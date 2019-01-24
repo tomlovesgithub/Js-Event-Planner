@@ -6,10 +6,6 @@ window.addEventListener('load', () => {
   let date = document.getElementById('date')
   let button = document.getElementById('button')
 
-  console.log(textbox.value)
-  console.log(date.value)
-  console.log(button)
-
   button.onclick = function(){
     let event = new Event(textbox.value, date.value);
     eventsCalender.addEvent(event)
@@ -20,9 +16,9 @@ window.addEventListener('load', () => {
   }
 
   function displayEvents(){
-    
+
     eventsCalender.eventsToDisplay();
-    
+
   }
 
 })
