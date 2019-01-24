@@ -33,9 +33,9 @@ const matchers = (exp) => ({
     }
     finally {
       if (result === 'pass') {
-      passMessage()
+        passMessage()
       } else {
-      failMessage()
+        failMessage()
       }
     }
   }

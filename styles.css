@@ -1,0 +1,23 @@
+/* body:hover {
+  background-image: repeating-radial-gradient(circle, slategrey, white);
+  background-position: center;
+} */
+
+body {
+  background-image: repeating-radial-gradient(circle, white, slategrey);
+  background-position: center;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0px);}
+  to { transform: translateY(4px);}
+}
+
+.event {
+  /* animation-name: bounce;
+  animation-duration: 0.001s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; */
+  border-style: dashed;
+}

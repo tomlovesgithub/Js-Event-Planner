@@ -1,8 +1,6 @@
 class EventsCalender {
   constructor() {
     this.events = []
-
-
   }
 
   addEvent(event) {
@@ -10,27 +8,25 @@ class EventsCalender {
   }
 
   sortEvents(){
-    let futureEvents;
-    futureEvents = []
+    let futureEvents= []
 
     this.events.forEach(function(event){
       let today = new Date()
       let eventDate = new Date(event.date)
-      console.log(today)
-      console.log(event.date)
+
       if(eventDate > today) {
         futureEvents.push(event)
       }
-    })
-    return futureEvents
 
+    })
+    return futureEvents;
 
   }
 
   eventsToDisplay(){
-    // var eventsArr = this.futureEvents;
-    var eventDiv = document.createElement('div')
-    eventDiv.innerText = ''
+    let eventDiv;
+    eventDiv = document.createElement('div')
+    eventDiv.className = 'event';
 
     this.sortEvents().forEach(function(event){
       var eventsList = document.getElementById('eventsList')
@@ -39,6 +35,8 @@ class EventsCalender {
 
     })
     return eventDiv;
+    return eventsList;
+    eventDiv.innerText = ''
   }
 
 }
