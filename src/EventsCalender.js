@@ -7,8 +7,8 @@ class EventsCalender {
     this.events.push(event)
   }
 
-  sortEvents(){
-    let futureEvents= []
+  returnFutureEvents(){
+    let futureEvents = []
 
     this.events.forEach(function(event){
       let today = new Date()
@@ -19,24 +19,28 @@ class EventsCalender {
       }
 
     })
+
     return futureEvents;
 
   }
 
-  eventsToDisplay(){
-    let eventDiv;
-    eventDiv = document.createElement('div')
-    eventDiv.className = 'event';
+  // returnChronologicalEvents() {
+  //   let sortedvar = this.sortedEvents()
+  //   sortedvar.sort((e1, e2) => {
+  //     e1.date - e2.date
+  //   })
+  //   return sortedvar
+  // }
 
-    this.sortEvents().forEach(function(event){
-      var eventsList = document.getElementById('eventsList')
+  displayEvents(){
+    let result = document.createElement('div')
+    this.returnFutureEvents().forEach(function(event){
+      let eventDiv = document.createElement('div')
+      eventDiv.className = 'event';
       eventDiv.innerText = `${event.content}: ${event.date}`
-      eventsList.appendChild(eventDiv);
-
+      result.appendChild(eventDiv)
     })
-    return eventDiv;
-    return eventsList;
-    eventDiv.innerText = ''
+    return result
   }
 
 }

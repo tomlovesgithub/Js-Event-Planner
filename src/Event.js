@@ -4,21 +4,8 @@ class Event {
     this.date = new Date(date);
   }
 
-  getContent(){
-    return this.contet
-  }
-
-  returnDate(){
-    return this.date
-  }
-
-  dateFormat(){
+  returnFormatedDate(){
     return this.date.toLocaleString('en-GB', { timeZone: 'UTC' });
-  }
-
-  upcoming(){
-    let currentDate = new Date();
-    return this.date > currentDate ? true : false
   }
 
 };
