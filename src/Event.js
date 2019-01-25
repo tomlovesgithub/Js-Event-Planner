@@ -4,8 +4,4 @@ class Event {
     this.date = new Date(date);
   }
 
-  returnFormatedDate(){
-    return this.date.toLocaleString('en-GB', { timeZone: 'UTC' });
-  }
-
 };

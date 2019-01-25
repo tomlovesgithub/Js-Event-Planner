@@ -1,32 +1,38 @@
 /* body:hover {
-  background-image: repeating-radial-gradient(circle, slategrey, white);
-  background-position: center;
+background-image: repeating-radial-gradient(circle, slategrey, white);
+background-position: center;
 } */
-
+html {
+  height: 100%;
+}
 body {
-  background-image: repeating-radial-gradient(circle, white, slategrey);
+  width: 100%;
+  background-image: linear-gradient(grey, white, white, white, white, white, grey);
   background-position: center;
+  background-size: cover;
 }
 
-@keyframes bounce {
-  from { transform: translateY(0px);}
-  to { transform: translateY(4px);}
+@keyframes swell {
+  0% { transform: scale3d(1,1,1)}
+  90% { transform: scale3d(1.05,1.05,1.05);}
 }
 
 .event {
-  /* animation-name: bounce;
-  animation-duration: 0.001s;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite; */
   border-style: dashed;
+  width: 500px;
+  height: 25px;
+  font-size: 1em;
+  font-style: oblique;
+  font-family: monospace;
+  transition-property: width,height,font-size;
+  transition-duration: 0.5s,0.5s,0.5s;
+  transition-timing-function: ease-in-out;
 }
 .event:hover {
-  /* animation-name: bounce;
-  animation-duration: 0.001s;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite; */
-  border-style: dashed;
-  border-color: red;
+  width: 750px;
+  height: 37px;
+  font-size: 1.5em;
+  transition-property: width,height,font-size;
+  transition-duration: 0.5s,0.5s,0.5s;
+  transition-timing-function: ease-in-out;
 }
